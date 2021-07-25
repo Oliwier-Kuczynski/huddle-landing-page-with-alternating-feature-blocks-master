@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* utility classes */
+.row {
+  display: flex;
+}
+
+.split-sb-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 60rem) {
+  .split-sb-c {
+    flex-direction: row;
+  }
+}
+
+.hr-spacer > * + * {
+  margin-top: 1.5rem;
+}
+
+.hr-spacer-xl > * + * {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+[class^="btn"] {
+  display: inline-block;
+  border: none;
+  background: none;
+  border-radius: 10vw;
+  box-shadow: 0px 4px 10px -4px hsla(0, 0%, 0%, 0.3);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-weight: 700;
+}
+
+[class^="btn"]:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  padding: 1rem 4rem;
+  background: hsl(322, 100%, 66%);
+  color: #fff;
+}
+
+.btn-secondary {
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  color: #000;
+}
+
+/* header */
+.primary-header {
+  background-image: url(./images/bg-hero-desktop.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.primary-header__content {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.primary-header__content img {
+  margin-top: 3rem;
+}
+
+@media (min-width: 60rem) {
+  .primary-header__content {
+    text-align: start;
+  }
+  .primary-header__texts {
+    max-width: 45%;
+  }
+  .primary-header__content img {
+    max-width: 45%;
+    margin-top: 0;
+  }
+}
+
+.logo-section {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 9rem;
+}
+
+/* advantages section */
+.advantages {
+  padding: 5rem 0 15rem 0;
+}
+
+.advantages__box {
+  border-radius: 1rem;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+}
+
+.advantages__box img {
+  margin-bottom: 2.2rem;
+}
+
+.advantages__box p {
+  color: hsl(208, 11%, 55%);
+}
+
+@media (min-width: 60rem) {
+  .advantages__box {
+    padding: 2rem 2rem 2rem 6rem;
+  }
+
+  .advantages__box:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .advantages__box img {
+    max-width: 30%;
+  }
+
+  .advantages__box div {
+    max-width: 50%;
+  }
+
+  .advantages__box img {
+    margin-bottom: 0;
+  }
+}
+
+footer {
+  position: relative;
+  padding: 12rem 0 3rem 0;
+  background: hsl(192, 100%, 9%);
+  color: #fff;
+}
+
+.footer-cta {
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 2rem 3rem;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.15);
+}
+
+.footer__content {
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.footer__column {
+  flex-basis: 100%;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer__column div {
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer__logo {
+  margin-bottom: 1.5rem;
+}
+
+.footer__social-media {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 4rem;
+}
